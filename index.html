@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habituate Bookstore</title>
+    <script
+      src="https://kit.fontawesome.com/cce18f0ce0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styling.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="navbar-links">
+        <li class="navbar-link">
+          <a href="/index.html" class="navbar-anchor">HOME</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/form.html" class="navbar-anchor">LOG IN/SIGN UP</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/profile.html" class="navbar-anchor">Profile</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/html/services.html" class="navbar-anchor"></a>
+        </li>
+      </ul>
+      <button class="navbar-button" onclick="toggleNavbar()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <h1>WELCOME TO HABITUATE READING BOOKSTORE</h1>
+      <div class="button-container">
+        <form>
+          <select name="" id="filterBy">
+            <option value="filter">fiction</option>
+            <option value="non-fiction">non-fiction</option>
+          </select>
+          <br /><br />
+          <!-- <input type="submit" value="Submit" /> -->
+        </form>
+      </div>
+      <div class="search_items">
+        <input
+          type="text"
+          class="form-control"
+          id="filter"
+          placeholder="Search Books..."
+        />
+      </div>
+      <div class="btn">
+        <img src="/SGN_02_12_2021_1613097851778.png" />
+      </div>
+    </div>
+    <div class="section">
+      <div class="order_details">
+        <div class="table_order">
+          <div class="details">
+            <h2>Customer name & Order ID</h2>
+            <i class="fas fa-plus-circle" onclick="addBooks()"></i>
+          </div>
+
+          <table>
+            <tr>
+              <th style="width: 500px">Book Title</th>
+              <th style="width: 80px">Price</th>
+              <th style="width: 80px">Quantity</th>
+            </tr>
+          </table>
+          <table id="table_info">
+            <tr>
+              <td style="width: 500px"></td>
+              <td style="width: 80px"></td>
+              <td style="width: 80px"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="cost_details">
+          <div id="st">
+            <h4>Subtotal:<span>R0.00</span></h4>
+            <h4>Discount:<span> R0.00</span></h4>
+            <h4>Tax:<span> R0.00</span></h4>
+          </div>
+          <div id="nd">
+            <h4>Total: <span> R0.00</span></h4>
+            <h4>Balance Due:<span> R0.00</span></h4>
+          </div>
+        </div>
+        <div class="order_btn">
+          <button>Cancel Order</button>
+          <button>Send Order</button>
+        </div>
+        <hr />
+        <div class="btn_functions">
+          <button onclick="addBooks()">ADD BOOK</button>
+          <button onclick="updateBooks()">UPDATE BOOK</button>
+          <button onclick="deleteBooks()">DELETE BOOK</button>
+        </div>
+      </div>
+      <div class="books_container"></div>
+    </div>
+    <script src="/dynamic.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 2px;
+  background-color: rgb(126, 121, 72);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+</head>
+<body style="text-align:center">
+
+<h2>Popup</h2>
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">
+  <h1>HI THERE FRIEND</h1>
+  <p>I hope that you are doing well this year.</p>
+  <button>CARTS</button>
+  
+  
+  </span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+</body>
+</html> -->
