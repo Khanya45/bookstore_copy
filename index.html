@@ -70,6 +70,16 @@
               <th style="width: 80px">Quantity</th>
             </tr>
           </table>
+          <form id="form_add" onsubmit="return false">
+            <input type="text" placeholder="Book title" />
+            <input type="text" placeholder="Author" />
+            <input type="text" placeholder="Genre" />
+            <input type="text" placeholder="price" />
+            <input type="text" placeholder="reviews" />
+            <input type="text" placeholder="image" />
+            <input type="submit" onclick="getValues()" value="submit" />
+          </form>
+
           <table id="table_info">
             <tr>
               <td style="width: 500px"></td>
@@ -78,8 +88,13 @@
             </tr>
           </table>
         </div>
+        <div class="add_img">
+          <i class="fas fa-cart-plus"></i>
+        </div>
+
         <div class="cost_details">
-          <div id="st">
+          <h1>TOTAL PRICE:<span>R0.00</span></h1>
+          <!-- <div id="st">
             <h4>Subtotal:<span>R0.00</span></h4>
             <h4>Discount:<span> R0.00</span></h4>
             <h4>Tax:<span> R0.00</span></h4>
@@ -87,11 +102,11 @@
           <div id="nd">
             <h4>Total: <span> R0.00</span></h4>
             <h4>Balance Due:<span> R0.00</span></h4>
-          </div>
+          </div> -->
         </div>
         <div class="order_btn">
-          <button>Cancel Order</button>
-          <button>Send Order</button>
+          <button onclick="cancelOrder()">Clear Order</button>
+          <button onclick="sendOrder()">Send Order</button>
         </div>
         <hr />
         <div class="btn_functions">

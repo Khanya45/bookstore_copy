@@ -32,9 +32,13 @@ body {
 
 .cost_details {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 50px;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  margin-left: 20px;
+}
+.cost_details h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .cost_details div h4 {
@@ -55,13 +59,24 @@ body {
     left: 50; */
 }
 
+.add_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.add_img i {
+  font-size: 20rem;
+}
+
 .section {
   background-color: #001233;
   display: flex;
   /* justify-content: center; */
   /* flex-direction: row; */
   /* align-items: center; */
-  height: 100%;
+  height: 100vh;
 }
 
 .books_container {
@@ -69,14 +84,14 @@ body {
   top: 20;
 }
 
-.order_details {
+/* .order_details {
   background-color: #001233;
-}
+} */
 
 .order_details {
-  width: 100%;
+  width: 50%;
   background-color: white;
-  height: 100vh;
+  height: 100%;
   /* position: fixed; */
 }
 
@@ -131,6 +146,15 @@ table {
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
+}
+
+form input {
+  padding: 10px;
+  outline: none;
+}
+
+#form_add {
+  display: none;
 }
 
 td,
