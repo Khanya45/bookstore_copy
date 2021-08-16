@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habituate Bookstore</title>
     <script
@@ -33,23 +33,18 @@
       </button>
 
       <h1>WELCOME TO HABITUATE READING BOOKSTORE</h1>
-      <div class="button-container">
-        <form>
-          <select name="" id="filterBy">
-            <option value="filter">fiction</option>
-            <option value="non-fiction">non-fiction</option>
-          </select>
-          <br /><br />
-          <!-- <input type="submit" value="Submit" /> -->
-        </form>
-      </div>
+      <!-- <div class="button-container">
+        <button onclick="filterBooks()">filter</button>
+      </div> -->
       <div class="search_items">
         <input
+          onkeyup="filterBooks()"
           type="text"
           class="form-control"
           id="filter"
-          placeholder="Search Books..."
+          placeholder="Search Books by title..."
         />
+        
       </div>
       <div class="btn">
         <img src="/SGN_02_12_2021_1613097851778.png" />
@@ -71,6 +66,7 @@
             </tr>
           </table>
           <form id="form_add" onsubmit="return false">
+            <input class="readonly" type="text" placeholder="isbn" />
             <input type="text" placeholder="Book title" />
             <input type="text" placeholder="Author" />
             <input type="text" placeholder="Genre" />
@@ -93,16 +89,8 @@
         </div>
 
         <div class="cost_details">
-          <h1>TOTAL PRICE:<span>R0.00</span></h1>
-          <!-- <div id="st">
-            <h4>Subtotal:<span>R0.00</span></h4>
-            <h4>Discount:<span> R0.00</span></h4>
-            <h4>Tax:<span> R0.00</span></h4>
-          </div>
-          <div id="nd">
-            <h4>Total: <span> R0.00</span></h4>
-            <h4>Balance Due:<span> R0.00</span></h4>
-          </div> -->
+          <h1>TOTAL PRICE: R0.00</h1>
+          
         </div>
         <div class="order_btn">
           <button onclick="cancelOrder()">Clear Order</button>
@@ -111,8 +99,8 @@
         <hr />
         <div class="btn_functions">
           <button onclick="addBooks()">ADD BOOK</button>
-          <button onclick="updateBooks()">UPDATE BOOK</button>
-          <button onclick="deleteBooks()">DELETE BOOK</button>
+          <button onclick="updateBook()">UPDATE BOOK</button>
+          <button onclick="deleteBook()">DELETE BOOK</button>
         </div>
       </div>
       <div class="books_container"></div>
@@ -120,91 +108,3 @@
     <script src="/dynamic.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 2px;
-  background-color: rgb(126, 121, 72);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-</style>
-</head>
-<body style="text-align:center">
-
-<h2>Popup</h2>
-
-<div class="popup" onclick="myFunction()">Click me to toggle the popup!
-  <span class="popuptext" id="myPopup">
-  <h1>HI THERE FRIEND</h1>
-  <p>I hope that you are doing well this year.</p>
-  <button>CARTS</button>
-  
-  
-  </span>
-</div>
-
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
-
-</body>
-</html> -->

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>WELCOME TO HABITUATE READING BOOKSTORE</h1>
+
+      <img src="/SGN_02_12_2021_1613097851778.png" />
+    </div>
+    <div class="form">
+      <div class="tab-header">
+        <div class="active">Sign Up</div>
+        <div>Sign In</div>
+      </div>
+      <div class="tab-content">
+        <div class="tab-body active">
+          <div class="form-element">
+            <input
+              class="input"
+              type="text"
+              name="first_name"
+              required
+              placeholder="Name"
+            />
+          </div>
+          <div class="form-element">
+            <input
+              class="input"
+              type="text"
+              required
+              name="last_name"
+              placeholder="Surname"
+            />
+          </div>
+          <div class="form-element">
+            <input type="text" placeholder="Username" required/>
+          </div>
+          <div class="form-element">
+            <input
+              class="input"
+              type="password"
+              required
+              placeholder="password"
+            />
+          </div>
+
+          <div class="form-element">
+            <button onclick="signUp()">Sign Up</button>
+          </div>
+        </div>
+
+        <div class="tab-body">
+          <div class="form-element">
+            <input
+              id="username"
+              type="text"
+              name="login"
+              required
+              placeholder="username"
+            />
+          </div>
+          <div class="form-element">
+            <input
+              id="password"
+              type="password"
+              name=" "
+              required
+              placeholder="password"
+            />
+          </div>
+
+          <div class="form-element">
+            <button onclick="findUser()" type="submit">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/form.js"></script>
+  </body>
+</html>

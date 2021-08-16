@@ -8,6 +8,10 @@ body {
   font: 15px/1.7 sans-serif;
 }
 
+.readonly {
+  pointer-events: none; 
+}
+
 .main {
   height: 100px;
   display: flex;
@@ -15,6 +19,7 @@ body {
   justify-content: space-between;
   /* justify-content: center; */
   background-color: #002855;
+  color: white;
 }
 
 .main .btn {
@@ -71,7 +76,7 @@ body {
 }
 
 .section {
-  background-color: #001233;
+  background-color: #33415c;
   display: flex;
   /* justify-content: center; */
   /* flex-direction: row; */
@@ -80,6 +85,8 @@ body {
 }
 
 .books_container {
+  height: 100vh;
+  padding-top: 50px;
   background-color: #33415c;
   top: 20;
 }

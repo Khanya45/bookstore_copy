@@ -15,7 +15,7 @@
 .popuptext {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .popuptext img {
@@ -30,18 +30,89 @@
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 400px;
-  height: 350px;
+  width:fit-content;
+  height:fit-content;
   background-color: #555;
   color: #fff;
   text-align: center;
+  justify-content: center;
   border-radius: 6px;
   padding: 8px 0;
   position: absolute;
   z-index: 1;
   /* bottom: 125%; */
-  left: 50%;
+  left: 300%;
   margin-left: -80px;
+  padding :4%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#33415c ;
+  height: 100vh;
+}
+
+.profile_page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form_update{
+  background :darkolivegreen;
+  height :300px;
+  width : 20%;
+  visibility: hidden;
+  display:flex;
+  justify-content :center;
+  align-items :center;
+  /* Selector("input").style.margintop = "10px"; */
+  background : darkolivegreen;
+}
+
+.form_update input{
+  margin-top: 10px;
+  padding:10px;
+  outline: none;
+}
+
+.cart_btns {
+  margin-top: 40px;
+  width: 100%;
+  justify-content:center;
+  display: flex;
+}
+
+.cart_btns button{
+  padding: 10px;
+  background-color: #555;
+  border: none;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.profile_container {
+  border-radius: 10px;
+  height: 50%;
+  width: 30%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background: darkolivegreen;
+  flex-direction: column;
+}
+
+.profile_container img{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Popup arrow */
